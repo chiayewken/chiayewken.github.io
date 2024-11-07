@@ -11,26 +11,50 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<br> <br> 1. <strong>Yew Ken Chia*</strong>, Guizhen Chen*, Weiwen Xu, Luu Anh Tuan, Soujanya Poria, Lidong Bing, “Reasoning Paths Optimization: Learning to Reason and Explore From Diverse Paths”, In EMNLP Findings 2024.
+
+<br> <br> 2. <strong>Yew Ken Chia</strong>, Hui Chen, Wei Han, Guizhen Chen, Sharifah Mahani Aljunied, Soujanya Poria, Lidong Bing, “Domain-Expanded ASTE: Rethinking Generalization in Aspect Sentiment Triplet Extraction”, In EMNLP 2024 SiCon Workshop.
+
+<br> <br> 3. <strong>Yew Ken Chia</strong>, Vernon Toh Yan Han, Deepanway Ghosal, Lidong Bing, Soujanya Poria, “Puz- zleVQA: Diagnosing Multimodal Reasoning Challenges of Language Models with Abstract Visual Patterns”, In ACL Findings 2024.
+
+<br> <br> 4. Xuan-Phi Nguyen, Wenxuan Zhang, Xin Li, Mahani Aljunied, Zhiqiang Hu, Chenhui Shen, <strong>Yew Ken Chia</strong>, Xingxuan Li, Jianyu Wang, Qingyu Tan, Liying Cheng, Guanzheng Chen, Yue Deng, Sen Yang, Chaoqun Liu, Hang Zhang, Lidong Bing, “SeaLLMs - Large Language Models for Southeast Asia”, In ACL 2024.
+
+<br> <br> 5. <strong>Yew Ken Chia</strong>, Pengfei Hong, Lidong Bing, Soujanya Poria, “InstructEval: Towards Holistic Evaluation of Instruction-Tuned Large Language Models”, In EACL 2024 Scale-LLM Workshop (Best Paper Award, 525 Stars on GitHub).
+
+<br> <br> 6. Xingxuan Li*, Ruochen Zhao*, <strong>Yew Ken Chia*</strong>, Bosheng Ding, Shafiq Joty and Soujanya Poria, Lidong Bing, “Chain-of-Knowledge: Grounding Large Language Models via Dynamic Knowledge Adapting over Heterogeneous Sources”, In ICLR 2023.
+
+<br> <br> 7. Wenxuan Zhang, Mahani Aljunied, Chang Gao, <strong>Yew Ken Chia</strong>, Lidong Bing, “M3Exam: A Mul- tilingual, Multimodal, Multilevel Benchmark for Examining Large Language Models”, In NeurIPS 2023 Datasets and Benchmarks.
+
+<br> <br> 8. Bosheng Ding, Chengwei Qin, Linlin Liu, <strong>Yew Ken Chia</strong>, Boyang Li, Shafiq Joty, Lidong Bing, “Is GPT-3 a Good Data Annotator?”, In ACL 2023.
+
+<br> <br> 9. <strong>Yew Ken Chia</strong>, Lidong Bing, Sharifah Mahani Aljunied, Luo Si, Soujanya Poria, “A Dataset for Hyper-Relational Extraction and a Cube-Filling Approach”, In EMNLP 2022.
+
+<br> <br> 10. <strong>Yew Ken Chia</strong>, Lidong Bing, Soujanya Poria, Luo Si, “RelationPrompt: Leveraging Prompts to Generate Synthetic Data for Zero-Shot Relation Triplet Extraction”, In ACL Findings 2022.
+
+<br> <br> 11. Lu Xu*, <strong>Yew Ken Chia*</strong>, Lidong Bing, “Learning Span-Level Interactions for Aspect Sentiment Triplet Extraction”, In ACL 2021.
+
+<br> <br> 12. <strong>Yew Ken Chia</strong>, Sam Witteveen, Martin Andrews, “Transformer to CNN: Label-scarce distillation for efficient text classification”, In NIPS 2018 CDNNRIA Workshop.
+
+<!--&lt;!&ndash; New style rendering if publication categories are defined &ndash;&gt;-->
+<!--{% if site.publication_category %}-->
+<!--  {% for category in site.publication_category  %}-->
+<!--    {% assign title_shown = false %}-->
+<!--    {% for post in site.publications reversed %}-->
+<!--      {% if post.category != category[0] %}-->
+<!--        {% continue %}-->
+<!--      {% endif %}-->
+<!--      {% unless title_shown %}-->
+<!--        <h2>{{ category[1].title }}</h2><hr />-->
+<!--        {% assign title_shown = true %}-->
+<!--      {% endunless %}-->
+<!--      {% include archive-single.html %}-->
+<!--    {% endfor %}-->
+<!--  {% endfor %}-->
+<!--{% else %}-->
+<!--  {% for post in site.publications reversed %}-->
+<!--    {% include archive-single.html %}-->
+<!--  {% endfor %}-->
+<!--{% endif %}-->
 
 
 

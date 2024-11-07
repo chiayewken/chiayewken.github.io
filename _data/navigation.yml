@@ -18,7 +18,7 @@ main:
 #    url: /portfolio/
 
   - title: "Resume"
-    url: /cv/
+    url: /resume/
 
   - title: "Blog Posts"
     url: https://chiayewken.hashnode.dev

@@ -19,7 +19,40 @@ have more than 900 citations on [Google Scholar](https://scholar.google.com/cita
 Selected Publications
 ======
 
-<div style="display: flex; align-items: flex-start;">
+<style>
+    .flex-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .flex-container img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+    
+    .flex-container p {
+        line-height: 1.6;
+    }
+    
+    @media (min-width: 768px) {
+        .flex-container {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        
+        .flex-container img {
+            width: 300px;
+            margin-right: 20px;
+            margin-bottom: 0;
+            align-self: flex-start;
+        }
+    }
+</style>
+
+<div class="flex-container">
 <img src="images/paper_rpo.png" alt="Reasoning Paths Optimization" style="width: 200px; margin-right: 20px;">
 <p>
    <a href="https://reasoning-paths.github.io"> Reasoning Paths Optimization: Learning to Reason and Explore From Diverse Paths</a> 
@@ -28,7 +61,7 @@ Selected Publications
 </p>
 </div>
 
-<div style="display: flex; align-items: flex-start;">
+<div class="flex-container">
 <img src="images/paper_puzzlevqa.png" alt="PuzzleVQA" style="width: 200px; margin-right: 20px;">
 <p>
    <a href="https://puzzlevqa.github.io"> PuzzleVQA: Diagnosing Multimodal Reasoning Challenges of Language Models with Abstract Visual Patterns </a> 
@@ -37,7 +70,7 @@ Selected Publications
 </p>
 </div>
 
-<div style="display: flex; align-items: flex-start;">
+<div class="flex-container">
 <img src="images/paper_cok.png" alt="Chain of Knowledge" style="width: 200px; margin-right: 20px;">
 <p>
    <a href="https://openreview.net/forum?id=cPgh4gWZlz"> Chain-of-Knowledge: Grounding Large Language Models via Dynamic Knowledge Adapting over Heterogeneous Sources </a> 
@@ -46,7 +79,7 @@ Selected Publications
 </p>
 </div>
 
-<div style="display: flex; align-items: flex-start;">
+<div class="flex-container">
 <img src="images/paper_hyperred.png" alt="Hyper-Relational Extraction" style="width: 200px; margin-right: 20px;">
 <p>
    <a href="https://aclanthology.org/2022.emnlp-main.688/"> A Dataset for Hyper-Relational Extraction and a Cube-Filling Approach </a> 
@@ -55,7 +88,7 @@ Selected Publications
 </p>
 </div>
 
-<div style="display: flex; align-items: flex-start;">
+<div class="flex-container">
 <img src="images/paper_relationprompt.png" alt="RelationPrompt" style="width: 200px; margin-right: 20px;">
 <p>
    <a href="https://aclanthology.org/2022.findings-acl.5/"> RelationPrompt: Leveraging Prompts to Generate Synthetic Data for Zero-Shot Relation Triplet Extraction </a> 
@@ -64,7 +97,7 @@ Selected Publications
 </p>
 </div>
 
-<div style="display: flex; align-items: flex-start;">
+<div class="flex-container">
 <img src="images/paper_span_aste.png" alt="Span-ASTE" style="width: 200px; margin-right: 20px;">
 <p>
    <a href="https://aclanthology.org/2021.acl-long.367/"> Learning Span-Level Interactions for Aspect Sentiment Triplet Extraction </a> 

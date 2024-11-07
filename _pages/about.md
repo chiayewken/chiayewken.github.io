@@ -37,7 +37,8 @@ Selected Publications
         line-height: 1.6;
     }
     
-    @media (min-width: 768px) {
+    /* For devices with width >= 768px or any device in landscape mode */
+    @media (min-width: 768px), (orientation: landscape) {
         .flex-container {
             flex-direction: row;
             align-items: flex-start;
@@ -45,6 +46,22 @@ Selected Publications
         
         .flex-container img {
             width: 300px;
+            margin-right: 20px;
+            margin-bottom: 0;
+            align-self: flex-start;
+        }
+    }
+    
+    /* Override for small devices in landscape mode */
+    @media (max-width: 767px) and (orientation: landscape) {
+        .flex-container {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        
+        .flex-container img {
+            width: 40%;
+            max-width: 200px;
             margin-right: 20px;
             margin-bottom: 0;
             align-self: flex-start;

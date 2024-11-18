@@ -1,0 +1,32 @@
+import torch
+import torch.nn.functional as F
+
+def dpo_loss(model, ref_model, prompts, preferred_outputs, non_preferred_outputs, beta=0.1):
+    # Get logits for preferred and non-preferred outputs
+    preferred_logits = model(prompts, preferred_outputs)
+    non_preferred_logits = model(prompts, non_preferred_outputs)
+
+    # Get reference logits
+    with torch.no_grad():
+        ref_preferred_logits = ref_model(prompts, preferred_outputs)
+        ref_non_preferred_logits = ref_model(prompts, non_preferred_outputs)
+
+    # Compute log ratios
+    preferred_log_ratios = preferred_logits - ref_preferred_logits
+    non_preferred_log_ratios = non_preferred_logits - ref_non_preferred_logits
+
+    # Compute DPO
+    loss = -F.logsigmoid(beta * (preferred_log_ratios - non_preferred_log_ratios)).mean()
+
+    return loss
+
+# Training loop
+for epoch in range(num_epochs):
+    for batch in dataloader:
+        prompts, preferred, non_preferred = batch
+
+        loss = dpo_loss(model, ref_model, prompts, preferred, non_preferred)
+
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
